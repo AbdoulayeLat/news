@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/AbdoulayeLat/news)
-- Live Site URL: [News]([https://your-live-site-url.com](https://abdoulayeln-news.vercel.app))
+- Live Site URL: [News](https://abdoulayeln-news.vercel.app)
 
 ## My process
 
