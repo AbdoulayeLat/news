@@ -1,4 +1,5 @@
 "use client"
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import {motion} from 'framer-motion';
 
@@ -41,10 +42,10 @@ export default function Home() {
   ]
 
   return (
-    <div className="w-full h-full px-16">
+    <div className="w-full h-full flex flex-col px-16">
       <Navbar/>
-      <div className="h-[90vh]">
-        <motion.section initial={{opacity:0, y:1000}} animate={{opacity:1, y:0}} transition={{duration:1}} className="h-[80%] mb-5 flex justify-between">
+      <div className="">
+        <motion.section initial={{opacity:0, y:1000}} animate={{opacity:1, y:0}} transition={{duration:1}} className="h-[70%] mb-16 flex justify-between">
           <div className="w-[70%] h-full flex flex-col gap-5">
             <motion.img src="/images/image-web-3-desktop.jpg"/>
             <div className="flex justify-between w-full">
@@ -68,10 +69,10 @@ export default function Home() {
             </ul>
           </div>
         </motion.section>
-        <motion.section className="py-2 w-[100%] grid grid-cols-3 gap-5">
+        <motion.section className="py-2 grid grid-cols-3 gap-5">
           {
             arcticles.map((arcticle) => 
-              <motion.div initial={{opacity:0, x:-1000}} animate={{opacity:1, x:0}} transition={{duration:1, delay:1}} key={arcticle.number} className="flex gap-5 h-[80%] w-[100%] justify-between">
+              <motion.div initial={{opacity:0, x:-1000}} animate={{opacity:1, x:0}} transition={{duration:1, delay:1}} key={arcticle.number} className="flex gap-5 h-[80%] justify-between">
                 <motion.img src={arcticle.image}/>
                 <div className="flex flex-col gap-2 h-[100%]">
                   <h1 className="text-text font-extrabold text-[50px]">{arcticle.number}</h1>
@@ -83,6 +84,7 @@ export default function Home() {
           }        
         </motion.section>
       </div>
+      <Footer/>
     </div>
   );
 }
